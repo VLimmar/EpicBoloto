@@ -18,8 +18,8 @@ class Player:
         self.ticks = 0
         self.pertick = 0
         self.worklist = [self.pic1] * 4
-    def draw(self, face):
-        face.blit(self.pic1, self.rect)
+    def draw(self, face, cam):
+        face.blit(self.pic1, cam.usecam(self.rect))
     def update(self):
         self.ticks = pygame.time.get_ticks()
         self.xspeed = 0
